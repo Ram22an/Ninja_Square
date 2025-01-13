@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 521bb1253a3206046a9c615e5f633570
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ActiveVolume: {fileID: -1793704417, guid: 89508187b5480e5448268a0481c12ec5, type: 3}
+  - MuteVolume: {fileID: 1659154397, guid: 89508187b5480e5448268a0481c12ec5, type: 3}
+  - VolumeButton: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

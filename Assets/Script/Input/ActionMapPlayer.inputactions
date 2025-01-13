@@ -1,0 +1,65 @@
+{
+    "name": "ActionMap",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "81fdff63-5eb0-440e-8644-2873133ccd39",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "bb893822-b754-4e80-bb44-c7f08152d7f4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "5ef160ad-b5bc-4972-a22c-872d8f0de214",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9131d986-dde7-4902-84e0-68d729789e51",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "750a7d21-919d-4a01-91f1-ca1e3b68c3f6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9ce976c-97c8-42cc-8823-df2462905120",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
