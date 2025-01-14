@@ -100,7 +100,6 @@ public class LevelGenerator : MonoBehaviour
         Vector3 CastlePlace = new Vector3(Startingpoint.transform.position.x + length[0]/4, Startingpoint.transform.position.y+0.5f, Startingpoint.transform.position.z);
         Instantiate(Castle, CastlePlace, Quaternion.identity);
         Startingpoint.transform.position = new Vector3(0, 0, 0);
-
     }
     private int CalculateNumberOfBlocks(int level)
     {
