@@ -3,6 +3,10 @@ public class PlayerSound : MonoBehaviour
 {
     [SerializeField]
     private AudioSource BackGroundVolume;
+    public void Awake()
+    {
+        BackGroundVolume.ignoreListenerPause = true;
+    }
     public void Start()
     {
         if (GameContentReaderAndSetter.Instance.GameSoundGetterAndSetter)

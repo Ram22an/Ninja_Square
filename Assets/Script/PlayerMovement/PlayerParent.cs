@@ -34,6 +34,10 @@ public class PlayerParent : MonoBehaviour
     private AudioSource JujustuActivation;
     private float verticalVelocity = 0f;
     public static PlayerParent Instance;
+    public void Awake()
+    {
+        JujustuActivation.ignoreListenerPause = true;
+    }
     public void Start()
     {
         if (Instance != null && Instance != this)

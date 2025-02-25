@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 43f71a6ca680446af9cda0ef4d55a1c0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306693
+  packageName: Modern Alert Panels
+  packageVersion: 1.0
+  assetPath: Assets/ONDAD/Alert Panels/Prefabs/Canvas_AlertPanel.prefab
+  uploadId: 720837

@@ -6,10 +6,13 @@ public class ColliderChecker : MonoBehaviour
     [SerializeField]
     private GameObject Player;
     private Vector3 Temp;
+    [SerializeField]
+    private GameObject DeadPlayer;
     public void OnTriggerEnter2D(Collider2D collision)
     { 
         if (collision.gameObject.tag == "Obstacles")
         {
+            Instantiate(DeadPlayer,Player.transform.position, Quaternion.identity);
             GameContentReaderAndSetter.Instance.SetDeathCountOfPlayer(1);
             Temp =PlayerMovement.Instance.transform.position;
             PlayerParent.Instance.FinalSpeed = -5;

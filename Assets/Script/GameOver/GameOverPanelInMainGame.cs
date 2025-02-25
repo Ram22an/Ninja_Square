@@ -22,6 +22,7 @@ public class GameOverPanelInMainGame : MonoBehaviour
 
     private void AnimateComponents()
     {
+
         // Reset animation states for clean entry
         ResetAnimationStates();
 

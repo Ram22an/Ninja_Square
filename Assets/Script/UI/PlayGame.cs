@@ -24,6 +24,10 @@ public class PlayGame : MonoBehaviour
     private TextMeshProUGUI DiamondText;
     [SerializeField]
     private GameObject CustomizePanel;
+    [SerializeField]
+    private GameObject LevelRenderer;
+    [SerializeField]
+    private GameObject TapToPlay;
     public void Awake()
     {
         CastelPanel.SetActive(false);
@@ -50,56 +54,32 @@ public class PlayGame : MonoBehaviour
     //all skin button
     public void OpenCustomizePanel()
     {
-        AnimateOpenPanel(CustomizePanel,0.8f,0.7f);
+        AnimateOpenPanel(CustomizePanel,0.9f,0.5f);
+        LevelRenderer.SetActive(false);
         AllSkinButton.SetActive(false);
         SettingButton.SetActive(false);
         AddDiamondButton.SetActive(false);
+        TapToPlay.SetActive(false);
     }
     public void CloseCustomizePanel()
     {
         AnimateClosePanel(CustomizePanel);
+        LevelRenderer.SetActive(true);
         AllSkinButton.SetActive(true);
         SettingButton.SetActive(true);
         AddDiamondButton.SetActive(true);
+        TapToPlay.SetActive(true);
     }
     //setting button
     public void OpenSettingPanel()
     {
-        AnimateOpenPanel(SettingPanel);
+        AnimateOpenPanel(SettingPanel,0.8f,0.7f);
         AllSkinButton.SetActive(false);
         SettingButton.SetActive(false);
         AddDiamondButton.SetActive(false);
+        TapToPlay.SetActive(false);
+        LevelRenderer.SetActive(false);
     }
-    ////Player panel to bullet panel through perivous button
-    //public void OpenBulletPanelThorughPlayer()
-    //{
-    //    NewAnimateClosePanel(PlayerPanel, () => AnimateOpenPanel(BulletPanel));
-    //}
-    ////Player panel to castel panel throught next button
-    //public void OpenCastelPanelThroughPlayer()
-    //{
-    //    NewAnimateClosePanel(PlayerPanel, () => AnimateOpenPanel(CastelPanel));
-    //}
-    ////Castle Panel to Player panel Through perivous button
-    //public void OpenPlayerPanelThroughCastel()
-    //{
-    //    NewAnimateClosePanel(CastelPanel,()=>AnimateOpenPanel(PlayerPanel));
-    //}
-    ////Castel Panel to Bullet panel through Next button
-    //public void OpenBulletPanelThroughCastel()
-    //{
-    //    NewAnimateClosePanel(CastelPanel, () => AnimateOpenPanel(BulletPanel));
-    //}
-    ////Bullet panel to Castle panel through  perivous button
-    //public void OpenCastelPanelThroughBullet()
-    //{
-    //    NewAnimateClosePanel(BulletPanel,()=>AnimateOpenPanel(CastelPanel));
-    //}
-    ////Bullet Panel to player panel through next button
-    //public void OpenPlayerPanelThroughBullet()
-    //{
-    //    NewAnimateClosePanel(BulletPanel, () => AnimateOpenPanel(PlayerPanel));
-    //}
     //exit the setting panel
     public void ExitTheSettingPanel()
     {
@@ -107,6 +87,8 @@ public class PlayGame : MonoBehaviour
         AllSkinButton.SetActive(true);
         SettingButton.SetActive(true);
         AddDiamondButton.SetActive(true);
+        TapToPlay.SetActive(true);
+        LevelRenderer.SetActive(true);
     }
     //exit the player panel
     public void OpenThePlayerPanel()
@@ -116,7 +98,7 @@ public class PlayGame : MonoBehaviour
     }
     public void ExitThePlayerPanel()
     {
-        NewAnimateClosePanel(PlayerPanel, () => AnimateOpenPanel(CustomizePanel,0.8f,0.7f));
+        NewAnimateClosePanel(PlayerPanel, () => AnimateOpenPanel(CustomizePanel,0.9f,0.5f));
     }
     //exit the bullet panel 
     public void OpenTheBulletPanel()
@@ -126,7 +108,7 @@ public class PlayGame : MonoBehaviour
     }
     public void ExitTheBulletPanel()
     {
-        NewAnimateClosePanel(BulletPanel, () => AnimateOpenPanel(CustomizePanel, 0.8f, 0.7f));
+        NewAnimateClosePanel(BulletPanel, () => AnimateOpenPanel(CustomizePanel, 0.9f, 0.5f));
     }
     //exit the castel panel 
     public void OpenTheCastelPanel()
@@ -136,7 +118,7 @@ public class PlayGame : MonoBehaviour
     }
     public void ExitTheCastelPanel()
     {
-        NewAnimateClosePanel(CastelPanel, () => AnimateOpenPanel(CustomizePanel, 0.8f, 0.7f));
+        NewAnimateClosePanel(CastelPanel, () => AnimateOpenPanel(CustomizePanel, 0.9f, 0.5f));
     }
 
 
@@ -181,6 +163,8 @@ public class PlayGame : MonoBehaviour
         AllSkinButton.SetActive(false);
         SettingButton.SetActive(false);
         AddDiamondButton.SetActive(false);
+        TapToPlay.SetActive(false);
+        LevelRenderer.SetActive(false);
     }
     public void CloseAddDiamondPanel()
     {
@@ -188,6 +172,8 @@ public class PlayGame : MonoBehaviour
         AllSkinButton.SetActive(true);
         SettingButton.SetActive(true);
         AddDiamondButton.SetActive(true);
+        TapToPlay.SetActive(true);
+        LevelRenderer.SetActive(true);
     }
     public void ShowAdFromAddDiamond()
     {

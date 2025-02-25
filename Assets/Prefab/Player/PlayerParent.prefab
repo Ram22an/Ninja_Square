@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 7357014911805133102}
+  DeadPlayer: {fileID: 3892746422510179003, guid: c33367b9e6325e8498028fe293b5bd97, type: 3}
 --- !u!1 &1561918940728831833
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 7357014911805133102}
+  DeadPlayer: {fileID: 3892746422510179003, guid: c33367b9e6325e8498028fe293b5bd97, type: 3}
 --- !u!1 &4302650563383130977
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 7357014911805133102}
+  DeadPlayer: {fileID: 3892746422510179003, guid: c33367b9e6325e8498028fe293b5bd97, type: 3}
 --- !u!1 &4438030704455901421
 GameObject:
   m_ObjectHideFlags: 0

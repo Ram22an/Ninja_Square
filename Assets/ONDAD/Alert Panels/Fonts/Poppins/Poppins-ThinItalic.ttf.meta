@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 80039bdd4159d4faa868542d097b4cda
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Poppins
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306693
+  packageName: Modern Alert Panels
+  packageVersion: 1.0
+  assetPath: Assets/ONDAD/Alert Panels/Fonts/Poppins/Poppins-ThinItalic.ttf
+  uploadId: 720837

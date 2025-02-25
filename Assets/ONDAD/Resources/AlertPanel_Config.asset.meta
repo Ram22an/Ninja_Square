@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0f10d119f3e0a4723acddad94d658b67
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306693
+  packageName: Modern Alert Panels
+  packageVersion: 1.0
+  assetPath: Assets/ONDAD/Resources/AlertPanel_Config.asset
+  uploadId: 720837

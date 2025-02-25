@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8331872dd5cdc4347b087b01fb58bbbb
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306693
+  packageName: Modern Alert Panels
+  packageVersion: 1.0
+  assetPath: Assets/ONDAD/Alert Panels/Shaders/BLUR.shader
+  uploadId: 720837

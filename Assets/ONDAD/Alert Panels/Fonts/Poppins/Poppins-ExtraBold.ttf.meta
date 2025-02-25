@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: d709977c76a774265948229b76d05652
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Poppins
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306693
+  packageName: Modern Alert Panels
+  packageVersion: 1.0
+  assetPath: Assets/ONDAD/Alert Panels/Fonts/Poppins/Poppins-ExtraBold.ttf
+  uploadId: 720837

@@ -94,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (inputActions.Player.enabled && inputActions.Player.Jump.triggered && NumberOfBlock < 3)
         {
+            Debug.Log(GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter);
             if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
             {
                 Handheld.Vibrate();

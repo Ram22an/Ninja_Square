@@ -84,18 +84,23 @@ public class PlayerSelection : MonoBehaviour
             if (!playerSelectedOrNot.Unlocked.Contains(i) && 
                 GameContentReaderAndSetter.Instance.GameContentDaimondGetterAndSetter >= playerSelectedOrNot.RequiredGems[i])
             {
-                GreenLockItem(i);
+                GoldLockItem(i);
             }
         }
     }
-    public void GreenLockItem(int index)
+    public void GoldLockItem(int index)
     {
         GameObject lockObject = Children[index].transform.Find("Lock")?.gameObject;
+        GameObject LockIcon = lockObject.transform.Find("LockIcon")?.gameObject;
 
-        if (lockObject != null)
+        if (LockIcon != null)
         {
-            Image image=lockObject.GetComponent<Image>();
-            image.color=Color.green;
+            //Outline image = lockObject.GetComponent<Outline>();
+            //image.effectColor=Color.green;
+            //image.effectDistance = new Vector2(2f, 2f);
+            Image LockImage=LockIcon.GetComponent<Image>();
+            Color32 myYellow = new Color32(255, 255, 0, 255);
+            LockImage.color = myYellow;
         }
     }
 

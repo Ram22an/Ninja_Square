@@ -6,11 +6,14 @@ public class FloorCollider : MonoBehaviour
 {
     [SerializeField]
     private GameObject Player;
+    [SerializeField]
+    private GameObject DeadPlayer;
     private Vector3 Temp;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Spike")
         {
+            Instantiate(DeadPlayer, Player.transform.transform.position, Quaternion.identity);
             GameContentReaderAndSetter.Instance.SetDeathCountOfPlayer(1);
             Temp =PlayerMovement.Instance.transform.position;
             PlayerParent.Instance.FinalSpeed = -5;

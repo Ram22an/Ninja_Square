@@ -1,8 +1,6 @@
 using DG.Tweening;
 using GoogleMobileAds.Api;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.WSA;
 using UnityEngine.UI;
 public class LevelCompleteUIMenu : MonoBehaviour
 {
