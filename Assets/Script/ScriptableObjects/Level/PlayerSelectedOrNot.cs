@@ -11,4 +11,6 @@ public class PlayerSelectedOrNot : ScriptableObject
     public bool WatchedAdFor7;
     [SerializeField]
     public bool WatchedAdFor8;
+    [SerializeField]
+    public Sprite Selected;
 }

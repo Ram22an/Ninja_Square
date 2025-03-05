@@ -12,6 +12,8 @@ public class GameContentReaderAndSetter : MonoBehaviour
     public static GameContentReaderAndSetter Instance;
     private bool DeathIstakeAviod;
     private AudioSource BackGroundSong;
+    public GameObject CurrentDeadPlayer;
+    public GameObject ReUseDeadPlayer;
     public float GameSoundVolumeGetterAndSetter
     {
         get => GameContent.SoundValue;
@@ -31,6 +33,7 @@ public class GameContentReaderAndSetter : MonoBehaviour
     {
         BackGroundSong = gameObject.AddComponent<AudioSource>();
         DeathIstakeAviod = true;
+        ReUseDeadPlayer = DeadPlayer;
         if(Instance != null)
         {
             Destroy(Instance);
@@ -38,14 +41,15 @@ public class GameContentReaderAndSetter : MonoBehaviour
         Instance = this;
         if (GameContent.PlayerDeadPositon != Vector3.zero) 
         {
-            Instantiate(DeadPlayer,GameContent.PlayerDeadPositon,Quaternion.identity);
+            CurrentDeadPlayer=Instantiate(DeadPlayer,GameContent.PlayerDeadPositon,Quaternion.identity);
         }
+
     }
     public void Update()
     {
         if (PlayerParent.Instance != null)
         {
-            if (Mathf.Abs(PlayerParent.Instance.transform.position.x - GameContent.PlayerDeadPositon.x) < 0.5f&& GameContent.PlayerDeadPositon!=Vector3.zero)
+            if (PlayerParent.Instance.transform.position.x > GameContent.PlayerDeadPositon.x && Mathf.Abs(PlayerParent.Instance.transform.position.x - GameContent.PlayerDeadPositon.x) < 1f&& GameContent.PlayerDeadPositon!=Vector3.zero)
             {
                 PlayJujustuSoundFromGameContentRNS();
             }

@@ -13,7 +13,8 @@ public class FloorCollider : MonoBehaviour
     {
         if (collision.gameObject.tag == "Spike")
         {
-            Instantiate(DeadPlayer, Player.transform.transform.position, Quaternion.identity);
+            Destroy(GameContentReaderAndSetter.Instance.CurrentDeadPlayer);
+            GameContentReaderAndSetter.Instance.CurrentDeadPlayer = Instantiate(GameContentReaderAndSetter.Instance.ReUseDeadPlayer, Player.transform.position, Quaternion.identity);
             GameContentReaderAndSetter.Instance.SetDeathCountOfPlayer(1);
             Temp =PlayerMovement.Instance.transform.position;
             PlayerParent.Instance.FinalSpeed = -5;
@@ -29,6 +30,11 @@ public class FloorCollider : MonoBehaviour
         yield return new WaitForSeconds(timer);
         PlayerParent.Instance.FinalSpeed = 0;
         Player.transform.parent = null;
+        StartCoroutine(SettingDeadPlayerPosition(0.5f));
+    }
+    IEnumerator SettingDeadPlayerPosition(float timer)
+    {
+        yield return new WaitForSeconds(timer);
         GameContentReaderAndSetter.Instance.SetDeadPlayerPosition(Temp);
     }
 }

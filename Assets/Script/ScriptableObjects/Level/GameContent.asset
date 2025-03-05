@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSkin: {fileID: 21300000, guid: b95b41a00603c904e91db85d12d071ed, type: 3}
   CastelSkin: {fileID: 876689030, guid: 94356a7330eb8c8469119247cfc5deef, type: 3}
-  PlayerSkin: {fileID: 1947697084, guid: 5117fa48acde83a45b18a0bebf516c40, type: 3}
-  diamond: 0
-  death: 0
+  PlayerSkin: {fileID: 1757168063971477599, guid: d046c061fb98952468d8a4a00303da83, type: 3}
+  diamond: 100
+  death: 1
   Vibrate: 0
   Sound: 0
   SoundValue: 0.24491885
   Character: 0
   Castel: 0
   Bullet: 0
-  PlayerDeadPositon: {x: 65.00749, y: 0.98999983, z: 0}
+  PlayerDeadPositon: {x: 29.990047, y: 2.930709, z: 0}

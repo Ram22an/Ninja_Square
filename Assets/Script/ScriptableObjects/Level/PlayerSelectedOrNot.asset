@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e61a59026f7f634d82461b5bec637e5, type: 3}
   m_Name: PlayerSelectedOrNot
   m_EditorClassIdentifier: 
-  Unlocked: 
+  Unlocked: 00000000
   RequiredGems: 000000000a000000140000001e0000002800000032000000
   WatchedAdFor7: 0
   WatchedAdFor8: 0
+  Selected: {fileID: 0}

@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public ActionMapPlayer inputActions;
     [SerializeField]
-    private float jump =0;
-    [SerializeField]
     private GameObject Player;
+    [SerializeField]
+    private SpriteRenderer PlayerSprite;
     [SerializeField]
     private GameObject Block;
     [SerializeField]
@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject GameOver;
     [SerializeField]
     public GameObject LevelCompleted;
+    [SerializeField]
+    private SpriteRenderer PlayerFace;
     public bool CanDeployBlockChecking;
     public int NumberOfBlock;
     private Rigidbody2D playerRb;
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         LevelCompleted.SetActive(false);
         CanDeployBlockChecking = true;
         NumberOfBlock = 0;
+        PlayerFace.sprite = PlayerSprite.sprite;
     }
     public void OnEnable()
     {
@@ -78,6 +81,14 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("Game");
         }
+        //if(NumberOfBlock == 0)
+        //{
+        //    PlayerWalking.Play();
+        //}
+        //else
+        //{
+        //    PlayerWalking.Stop();
+        //}
     }
     public void CheckingXAxis()
     {
@@ -94,15 +105,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (inputActions.Player.enabled && inputActions.Player.Jump.triggered && NumberOfBlock < 3)
         {
-            Debug.Log(GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter);
+            //Debug.Log(GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter);
             if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
             {
                 Handheld.Vibrate();
             }
             CanDeployBlock = false;
-            playerRb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            playerRb.AddForce(Vector2.zero, ForceMode2D.Impulse);
             instantiateBlockCoroutine = StartCoroutine(InstantiateBlock(0.05f));
-            StartCoroutine(CoolDown(0.2f));
+            StartCoroutine(CoolDown(0.5f));
             NumberOfBlock += 1;
         }
     }

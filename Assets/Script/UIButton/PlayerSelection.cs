@@ -35,6 +35,11 @@ public class PlayerSelection : MonoBehaviour
         }
         GameObject LockOf0 = Children[0].transform.Find("Lock")?.gameObject;
         LockOf0.SetActive(false);
+        if (playerSelectedOrNot.Selected == null)
+        {
+            playerSelectedOrNot.Selected = Children[0].transform.Find("Player").gameObject.GetComponent<Image>().sprite;
+            Player.sprite = Children[0].transform.Find("Player").gameObject.GetComponent<Image>().sprite;
+        }
         //GameObject PlayerType = Children[0].transform.Find("Player")?.gameObject;
         //SpriteRenderer spriteRendererRealPlayer = Player.GetComponent<SpriteRenderer>();
         //Image spriteRendererTypePlayer = PlayerType.GetComponent<Image>();
@@ -121,6 +126,8 @@ public class PlayerSelection : MonoBehaviour
             //SpriteRenderer spriteRendererRealPlayer = Player.GetComponent<SpriteRenderer>();
             Image spriteRendererTypePlayer=PlayerType.GetComponent<Image>();
             Player.sprite = spriteRendererTypePlayer.sprite;
+            playerSelectedOrNot.Selected = spriteRendererTypePlayer.sprite;
+
             GameContentReaderAndSetter.Instance.GameContentPlayerSkinGetterAndSetter = spriteRendererTypePlayer.sprite;
         }
         if (playerSelectedOrNot.Unlocked.Contains(number))
@@ -149,6 +156,7 @@ public class PlayerSelection : MonoBehaviour
         temp2.SetActive(true);
         Image temp2Image = temp2.GetComponent<Image>();
         Player.sprite = temp2Image.sprite;
+        playerSelectedOrNot.Selected = temp2Image.sprite;
         GameContentReaderAndSetter.Instance.GameContentPlayerSkinGetterAndSetter = temp2Image.sprite;
         if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
         {
@@ -167,6 +175,7 @@ public class PlayerSelection : MonoBehaviour
         temp2.SetActive(true);
         Image temp2Image = temp2.GetComponent<Image>();
         Player.sprite = temp2Image.sprite;
+        playerSelectedOrNot.Selected = temp2Image.sprite;
         GameContentReaderAndSetter.Instance.GameContentPlayerSkinGetterAndSetter = temp2Image.sprite;
         playerSelectedOrNot.WatchedAdFor8 = true;
         if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
@@ -174,6 +183,10 @@ public class PlayerSelection : MonoBehaviour
             Handheld.Vibrate();
         }
     }
+    public Sprite SelectedSpriteGiver
+    {
+        get {return playerSelectedOrNot.Selected; }
 
+    }
 
 }//class

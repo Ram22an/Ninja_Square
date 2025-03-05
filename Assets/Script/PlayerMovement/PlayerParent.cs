@@ -23,7 +23,7 @@ public class PlayerParent : MonoBehaviour
     //}
     #endregion
     [SerializeField]
-    public float BasemoveSpeed = 5f;
+    public float BasemoveSpeed = 6f;
     [SerializeField]
     public float gravity = -9.8f;
     [SerializeField]
@@ -50,7 +50,7 @@ public class PlayerParent : MonoBehaviour
         FinalSpeed = CalculateSpeed((int)CurrentLevelData[0]);
         if(FinalSpeed == 0f)
         {
-            FinalSpeed = 5f;
+            FinalSpeed = 6f;
         }
     }
     public void Update()
