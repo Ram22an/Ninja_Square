@@ -77,10 +77,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("Game");
         }
-        if (transform.position.y <= -3)
+        if (transform.position.y <= -2)
         {
             SceneManager.LoadScene("Game");
         }
+ 
         //if(NumberOfBlock == 0)
         //{
         //    PlayerWalking.Play();

@@ -14,4 +14,16 @@ public class Deactivate : MonoBehaviour
         }
         Destroy(gameObject);
     }
+    public void Update()
+    {
+        if (transform.position.y<0)
+        {
+            PlayerMovement.Instance.NumberOfBlock -= 1;
+            if (PlayerMovement.Instance.NumberOfBlock < 0)
+            {
+                PlayerMovement.Instance.NumberOfBlock = 0;
+            }
+            Destroy(gameObject);
+        }
+    }
 }

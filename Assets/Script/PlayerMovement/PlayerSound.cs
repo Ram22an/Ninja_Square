@@ -3,9 +3,19 @@ public class PlayerSound : MonoBehaviour
 {
     [SerializeField]
     private AudioSource BackGroundVolume;
+    private static PlayerSound instance;
     public void Awake()
     {
-        //DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         BackGroundVolume.ignoreListenerPause = true;
     }
     public void Start()
@@ -18,15 +28,6 @@ public class PlayerSound : MonoBehaviour
     }
     public void Update()
     {
-        //if(GameContentReaderAndSetter.Instance.GameSoundGetterAndSetter)
-        //{
-        //    BackGroundVolume.volume=GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;
-        //    BackGroundVolume.Play();
-        //}
-        //else
-        //{
-        //    BackGroundVolume.Stop();
-        //}
         if (GameContentReaderAndSetter.Instance.GameSoundGetterAndSetter)
         {
             float newVolume = GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;

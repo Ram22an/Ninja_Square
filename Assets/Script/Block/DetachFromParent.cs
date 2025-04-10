@@ -11,6 +11,8 @@ public class DetachFromParent : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacles")
         {
+            //BoxCollider2D temp=Parent.GetComponent<BoxCollider2D>();
+            //temp.enabled=false;
             PlayerMovement.Instance.NumberOfBlock -= 1;
             if (PlayerMovement.Instance.NumberOfBlock < 0)
             {

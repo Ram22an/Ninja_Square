@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 83ddf5cd4aa44013a1f18ea165ede923
+timeCreated: 1589269145
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168879
+  packageName: Easy Parallax
+  packageVersion: 1.0.3
+  assetPath: Assets/Scripts/EasyParallax/SpriteMovement.cs
+  uploadId: 385164

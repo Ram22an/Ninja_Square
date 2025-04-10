@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 65d7b20a4fd4f1b4bb074c43c0f3ca59
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168879
+  packageName: Easy Parallax
+  packageVersion: 1.0.3
+  assetPath: Assets/Scripts/EasyParallax/Demo/MovementSpeeds/Medium.asset
+  uploadId: 385164

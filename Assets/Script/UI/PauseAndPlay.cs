@@ -4,7 +4,7 @@ public class PauseAndPlay : MonoBehaviour
 {
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private GameObject TouchPanel; 
-    private bool isPaused = false;
+    public bool isPaused = false;
     private Button PauseButton;
     public void Awake()
     {

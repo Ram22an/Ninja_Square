@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "armeabi-v7a"
+			"value" : "arm64-v8a"
 		},
 		{
 			"name" : "ANDROID_NDK",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "armeabi-v7a"
+			"value" : "arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_ANDROID_NDK",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "g:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a"
+			"value" : "g:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -263,7 +263,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
+			"value" : "-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -frtti -stdlib=libc++"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS_DEBUG",
@@ -391,7 +391,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions"
+			"value" : "-DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_DEBUG",
@@ -599,7 +599,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "G:\\Ninja_Square\\.utmp\\RelWithDebInfo\\2q514t67\\prefab\\armeabi-v7a\\prefab"
+			"value" : "G:\\Ninja_Square\\.utmp\\RelWithDebInfo\\2q514t67\\prefab\\arm64-v8a\\prefab"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "G:\\Ninja_Square\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2q514t67\\obj\\armeabi-v7a"
+			"value" : "G:\\Ninja_Square\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2q514t67\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -967,7 +967,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "G:\\Ninja_Square\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2q514t67\\obj\\armeabi-v7a"
+			"value" : "G:\\Ninja_Square\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\2q514t67\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a"
+			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a"
 		},
 		{
 			"name" : "Unity_IS_TOP_LEVEL",
@@ -1275,7 +1275,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/armeabi-v7a/prefab/lib/arm-linux-androideabi/cmake/games-frame-pacing"
+			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing"
 		},
 		{
 			"name" : "swappywrapper_BINARY_DIR",
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/FramePacing"
+			"value" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/FramePacing"
 		},
 		{
 			"name" : "swappywrapper_IS_TOP_LEVEL",

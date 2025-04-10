@@ -49,7 +49,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -324,7 +324,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -558,7 +558,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -722,7 +722,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -816,24 +816,24 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a/CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake"
 		},
 		{
 			"path" : "FramePacing/CMakeLists.txt"
 		},
 		{
 			"isExternal" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/armeabi-v7a/prefab/lib/arm-linux-androideabi/cmake/games-frame-pacing/games-frame-pacingConfigVersion.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing/games-frame-pacingConfigVersion.cmake"
 		},
 		{
 			"isExternal" : true,
-			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/armeabi-v7a/prefab/lib/arm-linux-androideabi/cmake/games-frame-pacing/games-frame-pacingConfig.cmake"
+			"path" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing/games-frame-pacingConfig.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/armeabi-v7a",
+		"build" : "G:/Ninja_Square/.utmp/RelWithDebInfo/2q514t67/arm64-v8a",
 		"source" : "G:/Ninja_Square/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
 	},
 	"version" : 

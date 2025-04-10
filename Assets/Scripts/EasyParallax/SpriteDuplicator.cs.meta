@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 85a322b18aef4dbeb1f36b5797dcda73
+timeCreated: 1589270163
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168879
+  packageName: Easy Parallax
+  packageVersion: 1.0.3
+  assetPath: Assets/Scripts/EasyParallax/SpriteDuplicator.cs
+  uploadId: 385164

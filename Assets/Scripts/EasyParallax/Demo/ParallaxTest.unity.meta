@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7686652486172b54e93c17f9b83b1062
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168879
+  packageName: Easy Parallax
+  packageVersion: 1.0.3
+  assetPath: Assets/Scripts/EasyParallax/Demo/ParallaxTest.unity
+  uploadId: 385164

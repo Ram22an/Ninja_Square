@@ -10,6 +10,8 @@ public class GameOverPanelInMainGame : MonoBehaviour
     private Image HomeButton;
     [SerializeField]
     private Image TryAgainButton;
+    private static int retryCount = 0;
+    private const int maxRetriesBeforeAd = 3;
     public void Start()
     {
         if (GameOver == null|| HomeButton == null|| TryAgainButton == null) 
@@ -74,12 +76,34 @@ public class GameOverPanelInMainGame : MonoBehaviour
 
     public void ReplayGameButton()
     {
-        InterstitialScriptAd.Instance.ShowInterstitialAd("Game");
+        //InterstitialScriptAd.Instance.ShowInterstitialAd("Game");
         //SceneManager.LoadScene("Game");
+        retryCount++;
+
+        if (retryCount >= maxRetriesBeforeAd)
+        {
+            retryCount = 0;
+            InterstitialScriptAd.Instance.ShowInterstitialAd("Game");
+        }
+        else
+        {
+            SceneManager.LoadScene("Game");
+        }
     }
     public void HomeButtonLoadScene()
     {
-        InterstitialScriptAd.Instance.ShowInterstitialAd("MainMenu");
+        //InterstitialScriptAd.Instance.ShowInterstitialAd("MainMenu");
         //SceneManager.LoadScene("MainMenu");
+        retryCount++;
+
+        if (retryCount >= maxRetriesBeforeAd)
+        {
+            retryCount = 0;
+            InterstitialScriptAd.Instance.ShowInterstitialAd("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }

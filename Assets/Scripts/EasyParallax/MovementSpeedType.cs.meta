@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 088e50048ed6481fbea940f033b4019d
+timeCreated: 1589272887
+AssetOrigin:
+  serializedVersion: 1
+  productId: 168879
+  packageName: Easy Parallax
+  packageVersion: 1.0.3
+  assetPath: Assets/Scripts/EasyParallax/MovementSpeedType.cs
+  uploadId: 385164
