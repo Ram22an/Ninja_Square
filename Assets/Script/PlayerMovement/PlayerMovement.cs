@@ -1,10 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-using static Unity.Collections.AllocatorManager;
-using static UnityEngine.RuleTile.TilingRuleOutput;
-using Unity.VisualScripting;
-using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,10 +28,12 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement Instance;
     private float initialRelativeX;
     private Coroutine instantiateBlockCoroutine;
+    public AudioClip popSound;
+    private float lastBlockTime = 0f;
+    private const float BLOCK_COOLDOWN = 0.2f;
+
     public void Start()
     {
-        
-        //inputActions = new ActionMapPlayer();
         playerRb = Player.GetComponent<Rigidbody2D>();
         initialRelativeX = transform.position.x - transform.parent.position.x;
         if (Instance != null && Instance != this)
@@ -50,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         NumberOfBlock = 0;
         PlayerFace.sprite = PlayerSprite.sprite;
     }
+
     public void OnEnable()
     {
         if (inputActions == null)
@@ -58,21 +57,24 @@ public class PlayerMovement : MonoBehaviour
         }
         inputActions.Player.Enable();
     }
+
     public void OnDisable()
     {
         inputActions.Player.Disable();
     }
+
     public void Update()
     {
         if (CanDeployBlockChecking)
         {
-            AddingBloack();
+            HandleBlockInput();
             CheckingXAxis();
         }
         else
         {
             StopAllCoroutines();
         }
+
         if (inputActions.Player.Restart.triggered)
         {
             SceneManager.LoadScene("Game");
@@ -81,16 +83,37 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("Game");
         }
- 
-        //if(NumberOfBlock == 0)
-        //{
-        //    PlayerWalking.Play();
-        //}
-        //else
-        //{
-        //    PlayerWalking.Stop();
-        //}
     }
+
+    private void HandleBlockInput()
+    {
+        if (inputActions.Player.Jump.triggered && NumberOfBlock < 8)
+        {
+            float currentTime = Time.time;
+            if (currentTime - lastBlockTime >= BLOCK_COOLDOWN)
+            {
+                TryAddBlock();
+                lastBlockTime = currentTime;
+            }
+        }
+    }
+
+    private void TryAddBlock()
+    {
+        if (!CanDeployBlockChecking || NumberOfBlock >= 8) return;
+
+        if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
+        {
+            Handheld.Vibrate();
+        }
+
+        CanDeployBlock = false;
+        playerRb.AddForce(Vector2.zero, ForceMode2D.Impulse);
+        instantiateBlockCoroutine = StartCoroutine(InstantiateBlock(0.05f));
+        StartCoroutine(CoolDown(0.5f));
+        NumberOfBlock++;
+    }
+
     public void CheckingXAxis()
     {
         if (transform.parent != null)
@@ -102,32 +125,20 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    public void AddingBloack()
-    {
-        if (inputActions.Player.enabled && inputActions.Player.Jump.triggered && NumberOfBlock < 3)
-        {
-            //Debug.Log(GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter);
-            if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
-            {
-                Handheld.Vibrate();
-            }
-            CanDeployBlock = false;
-            playerRb.AddForce(Vector2.zero, ForceMode2D.Impulse);
-            instantiateBlockCoroutine = StartCoroutine(InstantiateBlock(0.05f));
-            StartCoroutine(CoolDown(0.5f));
-            NumberOfBlock += 1;
-        }
-    }
+
     private IEnumerator InstantiateBlock(float time)
     {
         yield return new WaitForSeconds(time);
         Instantiate(Block, instantiatePosition.transform.position, instantiatePosition.transform.rotation, transform);
+        PlayerSound.instance.GetComponentInParent<AudioSource>().PlayOneShot(popSound);
     }
+
     private IEnumerator CoolDown(float time)
     {
         yield return new WaitForSeconds(time);
-        CanDeployBlock=true;
+        CanDeployBlock = true;
     }
+
     public void StopBlockCoroutine()
     {
         if (instantiateBlockCoroutine != null)

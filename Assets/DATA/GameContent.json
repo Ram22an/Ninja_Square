@@ -1,0 +1,12 @@
+{
+    "death": 2,
+    "diamond": 103,
+    "Sound": false,
+    "SoundValue": 0.2449188530445099,
+    "Vibrate": false,
+    "PlayerDeadPositon": {
+        "x": 33.9911994934082,
+        "y": 0.9814770817756653,
+        "z": 0.0
+    }
+}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerSelectedOrNot
   m_EditorClassIdentifier: 
   Unlocked: 00000000
-  RequiredGems: 000000000a000000140000001e0000002800000032000000
+  RequiredGems: 0000000064000000c80000002c01000090010000f4010000
   WatchedAdFor7: 0
   WatchedAdFor8: 0
   Selected: {fileID: 0}

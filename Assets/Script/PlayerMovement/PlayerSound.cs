@@ -3,7 +3,7 @@ public class PlayerSound : MonoBehaviour
 {
     [SerializeField]
     private AudioSource BackGroundVolume;
-    private static PlayerSound instance;
+    public static PlayerSound instance;
     public void Awake()
     {
         if (instance == null)
@@ -22,7 +22,7 @@ public class PlayerSound : MonoBehaviour
     {
         if (GameContentReaderAndSetter.Instance.GameSoundGetterAndSetter)
         {
-            BackGroundVolume.volume = GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;
+          //  BackGroundVolume.volume = GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;
             BackGroundVolume.Play();
         }
     }
@@ -30,8 +30,8 @@ public class PlayerSound : MonoBehaviour
     {
         if (GameContentReaderAndSetter.Instance.GameSoundGetterAndSetter)
         {
-            float newVolume = GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;
-            BackGroundVolume.volume = newVolume;
+          //  float newVolume = GameContentReaderAndSetter.Instance.GameSoundVolumeGetterAndSetter;
+            //BackGroundVolume.volume = newVolume;
             if (!BackGroundVolume.isPlaying)
             {
                 BackGroundVolume.Play();

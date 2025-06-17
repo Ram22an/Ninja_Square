@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
@@ -19,12 +20,16 @@ public class LevelGenerator : MonoBehaviour
     private GameObject FinalObj;
     [SerializeField]
     private GameObject Castle;
+    public TextMeshProUGUI levelTText;
 
     public void Start()
     {
+        
         float[] CurrentLevelData = LevelManager.Instance.LoadLevelData();
         int currentLevel = (int)CurrentLevelData[0];
+        
         difficulty = CalculateNumberOfBlocks((int)CurrentLevelData[0]);
+        levelTText.text ="Level : "+ currentLevel.ToString();
         prefabList=gameObjectList.Prefabs;
         difficultprefabList=difficultLevelParts.Prefabs;
         length = gameObjectList.lenght;

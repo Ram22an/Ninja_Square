@@ -7,7 +7,7 @@ public class GameOverPanelInMainGame : MonoBehaviour
     [SerializeField]
     private Image GameOver;
     [SerializeField]
-    private Image HomeButton;
+   private Image HomeButton;
     [SerializeField]
     private Image TryAgainButton;
     private static int retryCount = 0;
@@ -34,21 +34,21 @@ public class GameOverPanelInMainGame : MonoBehaviour
             .SetEase(Ease.OutBounce);
 
         // Animate Home Button (sliding in from the left)
-        HomeButton.transform.DOLocalMoveX(386f, 0.5f)
-            .From(new Vector3(1200f, HomeButton.transform.localPosition.y, 0f)) // Adjust initial position
-            .SetEase(Ease.OutExpo)
-            .SetDelay(0.5f);
+       // HomeButton.transform.DOLocalMoveX(386f, 0.5f)
+            //.From(new Vector3(1200f, HomeButton.transform.localPosition.y, 0f)) // Adjust initial position
+           // .SetEase(Ease.OutExpo)
+          //  .SetDelay(0.5f);
 
         // Animate Try Again Button (sliding in from the right)
-        TryAgainButton.transform.DOLocalMoveX(-394f, 0.5f)
-            .From(new Vector3(-1200f, TryAgainButton.transform.localPosition.y, 0f)) // Adjust initial position
-            .SetEase(Ease.OutExpo)
-            .SetDelay(0.5f);
+       // TryAgainButton.transform.DOLocalMoveX(-394f, 0.5f)
+          //  .From(new Vector3(-1200f, TryAgainButton.transform.localPosition.y, 0f)) // Adjust initial position
+          //  .SetEase(Ease.OutExpo)
+         //   .SetDelay(0.5f);
 
         // Fade in animations
         GameOver.DOFade(1f, 1f).From(0f).SetDelay(0.3f);
-        HomeButton.DOFade(1f, 0.25f).From(0f).SetDelay(0.5f);
-        TryAgainButton.DOFade(1f, 0.25f).From(0f).SetDelay(0.5f);
+        //HomeButton.DOFade(1f, 0.25f).From(0f).SetDelay(0.5f);
+        //TryAgainButton.DOFade(1f, 0.25f).From(0f).SetDelay(0.5f);
         if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
         {
             Handheld.Vibrate();
@@ -62,8 +62,8 @@ public class GameOverPanelInMainGame : MonoBehaviour
 
         // Reset transparency for GameOver, HomeButton, and TryAgainButton
         ResetImageAlpha(GameOver);
-        ResetImageAlpha(HomeButton);
-        ResetImageAlpha(TryAgainButton);
+      //  ResetImageAlpha(HomeButton);
+        //ResetImageAlpha(TryAgainButton);
     }
 
     private void ResetImageAlpha(Image image)

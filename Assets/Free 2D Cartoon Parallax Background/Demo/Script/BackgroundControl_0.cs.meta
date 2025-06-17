@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f78d6bc8b9882e04e93c862c3a1be9ce
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205812
+  packageName: Free 2D Cartoon Parallax Background
+  packageVersion: 1.0
+  assetPath: Assets/Free 2D Cartoon Parallax Background/Demo/Script/BackgroundControl_0.cs
+  uploadId: 484396

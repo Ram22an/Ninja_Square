@@ -28,6 +28,7 @@ public class UIElementSetter : MonoBehaviour
     }
     public void Start()
     {
+        Time.timeScale = 1f;
         Player.sprite = GameContentReaderAndSetter.Instance.GameContentPlayerSkinGetterAndSetter;
         PlayerDead.sprite = GameContentReaderAndSetter.Instance.GameContentPlayerSkinGetterAndSetter;
         int index = AllBullet.IndexOf(GameContentReaderAndSetter.Instance.GameContentBulletSkinGetterAndSetter);

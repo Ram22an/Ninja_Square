@@ -67,7 +67,16 @@ public class LevelCompleteUIMenu : MonoBehaviour
     public void NextGameButton()
     {
         GameContentReaderAndSetter.Instance.SetDeathCountOfPlayer(0, 0);
-        InterstitialScriptAd.Instance.ShowInterstitialAd("Game");
+        Destroy( GameObject.Find("DeadPlayer(Clone)"));
+
+        if (PlayerPrefs.GetInt("LevelAd") == 0)
+        {
+            PlayerPrefs.SetInt("LevelAd", 1);
+        }
+        else { 
+            InterstitialScriptAd.Instance.ShowInterstitialAd("Game");
+            PlayerPrefs.SetInt("LevelAd", 0);
+        }
         //SceneManager.LoadScene("Game");
     }
 

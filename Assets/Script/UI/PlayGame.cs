@@ -177,7 +177,9 @@ public class PlayGame : MonoBehaviour
     }
     public void ShowAdFromAddDiamond()
     {
-        if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
+        if (Application.internetReachability == NetworkReachability.NotReachable) return;
+        
+            if (GameContentReaderAndSetter.Instance.GameVibrationGetterAndSetter)
         {
             Handheld.Vibrate();
         }

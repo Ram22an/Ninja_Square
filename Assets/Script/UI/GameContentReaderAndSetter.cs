@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 using UnityEngine.UI;
 
 public class GameContentReaderAndSetter : MonoBehaviour
@@ -14,6 +15,88 @@ public class GameContentReaderAndSetter : MonoBehaviour
     private AudioSource BackGroundSong;
     public GameObject CurrentDeadPlayer;
     public GameObject ReUseDeadPlayer;
+    public GameObject htpPanel;
+    
+    private string jsonFilePath => Application.dataPath + "/Data/GameContent.json";
+
+
+
+    private const string SaveKey = "GameContentData";
+
+    private void OnEnable()
+    {
+        if (File.Exists(jsonFilePath))
+        {
+            string json = File.ReadAllText(jsonFilePath);
+            SerializableGameContent data = JsonUtility.FromJson<SerializableGameContent>(json);
+            LoadGameContentFromSerializable(data);
+            Debug.Log("Loaded GameContent from JSON file.");
+        }
+        else
+        {
+            Debug.Log("No save file found. Using default GameContent.");
+        }
+    }
+
+    private void OnDisable()
+    {
+        // Ensure directory exists
+        string folder = Path.GetDirectoryName(jsonFilePath);
+        if (!Directory.Exists(folder))
+        {
+            Directory.CreateDirectory(folder);
+            Debug.Log("Created missing folder: " + folder);
+        }
+
+        SerializableGameContent data = ConvertToSerializableGameContent();
+        string json = JsonUtility.ToJson(data, true); // pretty print
+        File.WriteAllText(jsonFilePath, json);
+        Debug.Log("Saved GameContent to: " + jsonFilePath);
+    }
+
+
+
+    private SerializableGameContent ConvertToSerializableGameContent()
+    {
+        return new SerializableGameContent
+        {
+            death = GameContent.death,
+            diamond = GameContent.diamond,
+            Sound = GameContent.Sound,
+            SoundValue = GameContent.SoundValue,
+            Vibrate = GameContent.Vibrate,
+            PlayerDeadPositon = ConvertToSerializableVector3(GameContent.PlayerDeadPositon),
+        };
+    }
+
+    private void LoadGameContentFromSerializable(SerializableGameContent data)
+    {
+        GameContent.death = data.death;
+        GameContent.diamond = data.diamond;
+        GameContent.Sound = data.Sound;
+        GameContent.SoundValue = data.SoundValue;
+        GameContent.Vibrate = data.Vibrate;
+        GameContent.PlayerDeadPositon = ConvertToUnityVector3(data.PlayerDeadPositon);
+    }
+
+
+
+
+
+
+
+
+    public void Start()
+    {
+        if (PlayerPrefs.GetInt("htp") == 0)
+        {
+            htpPanel.SetActive(true);
+            PlayerPrefs.SetInt("htp", 1);
+        }
+    }
+    public void PauseOrPlay(float t) { 
+    Time.timeScale = t;
+    }
     public float GameSoundVolumeGetterAndSetter
     {
         get => GameContent.SoundValue;
@@ -141,4 +224,22 @@ public class GameContentReaderAndSetter : MonoBehaviour
             GameContent.CastelSkin = value;
         }
     }
+
+
+
+    private SerializableVector3 ConvertToSerializableVector3(Vector3 vec)
+    {
+        return new SerializableVector3
+        {
+            x = vec.x,
+            y = vec.y,
+            z = vec.z
+        };
+    }
+
+    private Vector3 ConvertToUnityVector3(SerializableVector3 vec)
+    {
+        return new Vector3(vec.x, vec.y, vec.z);
+    }
+
 }//class

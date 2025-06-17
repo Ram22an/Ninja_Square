@@ -6,6 +6,12 @@ public class GameContent : ScriptableObject
     public Sprite BulletSkin;
     public Sprite CastelSkin;
     public Sprite PlayerSkin;
+    //[System.NonSerialized] public Sprite PlayerSkin;
+    //[System.NonSerialized] public Sprite BulletSkin;
+    //[System.NonSerialized] public Sprite CastelSkin;
+    //[System.NonSerialized] public Sprite PlayerSkin;
+    //[System.NonSerialized] public Sprite BulletSkin;
+    //[System.NonSerialized] public Sprite CastelSkin;
     public int diamond;
     public int death;
     public bool Vibrate;
