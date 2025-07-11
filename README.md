@@ -5,6 +5,11 @@ Ninja Square is a fun and engaging game that challenges players with exciting pl
 ## 🕹️ Game Overview
 In **Ninja Square**, players control a nimble square ninja, navigating through obstacles, collecting power-ups, and aiming for the highest score. The game features fast-paced gameplay, responsive controls, and dynamic level design to keep players engaged.
 
+### 🔽 Download Build
+If you just want to play the game, you can download the latest build here:  
+👉 [**Download Ninja Square**](https://play.google.com/store/apps/details?id=com.BeanBot.NinjaCats)  
+
+
 ## ✨ Features
 - Smooth and responsive controls
 - Engaging and challenging levels
